@@ -5,7 +5,8 @@ A GitHub Action to deploy to Firebase Hosting
 - You can choose a specific branch to allow deployment by using the `TARGET_BRANCH` env var (`master` if not specified).
 - Make sure you have the `firebase.json` file in the repository
 - Get the Firebase token by running `firebase login:ci` and [store it](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) as the `FIREBASE_TOKEN` secret
-- Set the project name in the `FIREBASE_PROJECT` env var
+- Set the project id in the `FIREBASE_PROJECT` env var
+- Set the [target](https://firebase.google.com/docs/cli/targets) name in the `TARGET_NAME` env var (It will deploy to all targets if `TARGET_NAME` is not specified)
 
 Example workflow
 

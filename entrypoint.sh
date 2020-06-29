@@ -20,7 +20,14 @@ if [ "${GITHUB_REF}" != "refs/heads/${TARGET_BRANCH}" ]; then
     exit 1
 fi
 
-firebase deploy \
-    -m "${GITHUB_SHA}" \
-    --project ${FIREBASE_PROJECT} \
-    --only hosting:${TARGET_NAME}
+if [ -z "${TARGET_NAME}" ]; then
+    firebase deploy \
+        -m "${GITHUB_SHA}" \
+        --project ${FIREBASE_PROJECT} \
+        --only hosting
+else 
+    firebase deploy \
+        -m "${GITHUB_SHA}" \
+        --project ${FIREBASE_PROJECT} \
+        --only hosting:${TARGET_NAME}
+fi
