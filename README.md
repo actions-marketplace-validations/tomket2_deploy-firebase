@@ -30,4 +30,5 @@ jobs:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         FIREBASE_PROJECT: name-of-the-project
         TARGET_BRANCH: main
+        TARGET_NAME: develop 
 ```
