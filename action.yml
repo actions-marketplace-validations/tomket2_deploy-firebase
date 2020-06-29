@@ -1,6 +1,6 @@
-name: 'Deploy to Firebase Hosting by target name'
+name: 'Deploy to Firebase Hosting using target name'
 author: 'Tommy Kim <tomket2@naver.com>'
-description: 'A GitHub Action to deploy to Firebase Hosting by target name'
+description: 'A GitHub Action to deploy to Firebase Hosting using target name'
 runs:
   using: 'docker'
   image: 'Dockerfile'
