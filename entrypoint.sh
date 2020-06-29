@@ -23,4 +23,4 @@ fi
 firebase deploy \
     -m "${GITHUB_SHA}" \
     --project ${FIREBASE_PROJECT} \
-    --only hosting
+    --only hosting:${FIREBASE_TARGET_NAME}
